@@ -5,7 +5,6 @@ signal hit
 export var min_speed = 150  # Minimum speed range.
 export var max_speed = 250  # Maximum speed range.
 
-var rng = RandomNumberGenerator.new()
 var flipped = true
 var speed = rand_range(min_speed, max_speed) as int
 

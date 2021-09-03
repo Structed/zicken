@@ -16,11 +16,9 @@ func start_game():
 func game_over():
 	$MobTimer.stop()
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
 
 func _on_MobTimer_timeout():
 	var mob = Mob.instance()

@@ -5,8 +5,22 @@ signal hit
 export var min_speed = 150  # Minimum speed range.
 export var max_speed = 250  # Maximum speed range.
 
+var rng = RandomNumberGenerator.new()
+var flipped = true
+
+
 func _ready():
-	pass
+	var viewport_size = get_viewport().size
+	if randi() % 2:
+		flipped = false    
+	
+	$AnimatedSprite.play()
+	$AnimatedSprite.set_flip_h(flipped)
+	
+	var x = viewport_size.x if flipped else 0
+	var y = rand_range(0, viewport_size.y)
+	
+	position = Vector2(x, y);
 
 
 func _on_VisibilityNotifier2D_screen_exited():

@@ -29,7 +29,9 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 
 func _on_Zicken_input_event(viewport, event, shape_idx):
-	pass # Replace with function body.
+	if (event.is_action_pressed("shoot")):
+		emit_signal("hit")
+		print("Shot")
 
 func _process(delta):
 	var change = delta * speed

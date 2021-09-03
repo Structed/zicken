@@ -7,6 +7,7 @@ export var max_speed = 250  # Maximum speed range.
 
 var rng = RandomNumberGenerator.new()
 var flipped = true
+var speed = rand_range(min_speed, max_speed) as int
 
 
 func _ready():
@@ -30,3 +31,10 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 func _on_Zicken_input_event(viewport, event, shape_idx):
 	pass # Replace with function body.
+
+func _process(delta):
+	var change = delta * speed
+	if (flipped):
+		position.x -= change
+	else:
+		position.x += change

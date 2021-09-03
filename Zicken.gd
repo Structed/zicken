@@ -17,8 +17,9 @@ func _ready():
 	$AnimatedSprite.play()
 	$AnimatedSprite.set_flip_h(flipped)
 	
+	var margin_y = 1224 * $AnimatedSprite.scale.y
 	var x = viewport_size.x if flipped else 0
-	var y = rand_range(0, viewport_size.y)
+	var y = rand_range(0 + margin_y, viewport_size.y - margin_y)
 	
 	position = Vector2(x, y);
 

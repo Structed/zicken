@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Zicken_Screenshot.png-2077e26a6c3fc6f84e20257ed9febe64.stex"
+path="res://.import/Zicken_Screenshot.png-f1dcddd030e831c5cb44b3d63d0df247.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://export/Zicken_Screenshot.png"
-dest_files=[ "res://.import/Zicken_Screenshot.png-2077e26a6c3fc6f84e20257ed9febe64.stex" ]
+source_file="res://art/public/Zicken_Screenshot.png"
+dest_files=[ "res://.import/Zicken_Screenshot.png-f1dcddd030e831c5cb44b3d63d0df247.stex" ]
 
 [params]
 

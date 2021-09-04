@@ -7,6 +7,8 @@
 script = ExtResource( 1 )
 
 [node name="ScoreHBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 20.0
+margin_top = 20.0
 margin_right = 158.0
 margin_bottom = 40.0
 __meta__ = {
@@ -14,16 +16,16 @@ __meta__ = {
 }
 
 [node name="ScoreHintLabel" type="Label" parent="ScoreHBoxContainer"]
-margin_top = 13.0
+margin_top = 3.0
 margin_right = 39.0
-margin_bottom = 27.0
+margin_bottom = 17.0
 text = "Score:"
 
 [node name="ScoreValueLabel" type="Label" parent="ScoreHBoxContainer"]
 margin_left = 43.0
-margin_top = 13.0
+margin_top = 3.0
 margin_right = 51.0
-margin_bottom = 27.0
+margin_bottom = 17.0
 text = "0"
 
 [node name="ShellHBoxContainer" type="HBoxContainer" parent="."]

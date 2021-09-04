@@ -30,7 +30,8 @@ extents = Vector2( 30.094, 30.5858 )
 
 [node name="Zicken" type="RigidBody2D"]
 input_pickable = true
-collision_layer = 0
+collision_layer = 2
+collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource( 11 )
 __meta__ = {

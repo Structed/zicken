@@ -1,7 +1,7 @@
 extends Node
 
 export (PackedScene) var Mob
-export (float) var reload_time = 2
+export (float) var reload_time = 1
 var score
 var rng = RandomNumberGenerator.new()
 

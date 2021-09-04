@@ -3,6 +3,8 @@ My entry for the "[STOP WAITING FOR GODOT](https://itch.io/jam/stop-waiting-for-
 
 #stopwaitingforgodot
 
+![Gameplay GIF](art/Zicken_Progress_Score.gif)
+
 
 This game is supposed to be a re-imagination of the classic "Moorhuhn".
 

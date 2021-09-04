@@ -1,11 +1,13 @@
 extends Node
 
 export (PackedScene) var Mob
+export (float) var reload_time = 2
 var score
 var rng = RandomNumberGenerator.new()
 
 const INITIAL_SHELLS = 5
 var current_shells = INITIAL_SHELLS
+var reloading = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,10 +30,20 @@ func _on_MobTimer_timeout():
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
+		if reloading:
+			return
 		if event.button_index == BUTTON_LEFT:
 			if event.pressed:
 				current_shells -= 1
-				print("Left button was clicked at ", event.position)
-				print("Shells left: ", current_shells)
+				if current_shells >= 0:
+					$WeaponShootSound.play()
+					print("Shells left: ", current_shells)
 			else:
 				print("Left button was released")
+		elif event.button_index == BUTTON_RIGHT:
+			if event.pressed:
+				$WeaponReloadSound.play()
+				reloading = true
+				yield(get_tree().create_timer(reload_time), "timeout")
+				current_shells = INITIAL_SHELLS
+				reloading = false

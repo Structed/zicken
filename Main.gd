@@ -35,6 +35,7 @@ func _unhandled_input(event):
 		if event.button_index == BUTTON_LEFT:
 			if event.pressed:
 				current_shells -= 1
+				$HUD.shoot()
 				if current_shells >= 0:
 					$WeaponShootSound.play()
 					print("Shells left: ", current_shells)
@@ -42,6 +43,7 @@ func _unhandled_input(event):
 			if event.pressed:
 				$WeaponReloadSound.play()
 				reloading = true
+				$HUD.reload()
 				yield(get_tree().create_timer(reload_time), "timeout")
 				current_shells = INITIAL_SHELLS
 				reloading = false

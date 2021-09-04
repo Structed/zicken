@@ -30,8 +30,11 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 func _on_Zicken_input_event(viewport, event, shape_idx):
 	if (event.is_action_pressed("shoot")):
-		emit_signal("hit")
-		print("Shot")
+		var parent = get_parent()
+		if parent.current_shells >= 0 and not parent.reloading:
+			emit_signal("hit")
+			print("Shot")
+			queue_free()
 
 func _process(delta):
 	var change = delta * speed

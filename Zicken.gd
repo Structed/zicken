@@ -1,6 +1,8 @@
 extends RigidBody2D
 
-signal hit
+signal hit(score)
+
+const SCORE_DEFAULT = 25
 
 export var min_speed = 150  # Minimum speed range.
 export var max_speed = 250  # Maximum speed range.
@@ -32,8 +34,7 @@ func _on_Zicken_input_event(viewport, event, shape_idx):
 	if (event.is_action_pressed("shoot")):
 		var parent = get_parent()
 		if parent.current_shells >= 0 and not parent.reloading:
-			emit_signal("hit")
-			print("Shot")
+			emit_signal("hit", SCORE_DEFAULT)
 			queue_free()
 
 func _process(delta):

@@ -27,6 +27,7 @@ func game_over():
 func _on_MobTimer_timeout():
 	var mob = Mob.instance()
 	add_child(mob)
+	mob.connect("hit", $HUD, "add_score")
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton:

@@ -39,7 +39,6 @@ func _unhandled_input(event):
 				$HUD.shoot()
 				if current_shells >= 0:
 					$WeaponShootSound.play()
-					print("Shells left: ", current_shells)
 		elif event.button_index == BUTTON_RIGHT:
 			if event.pressed:
 				$WeaponReloadSound.play()

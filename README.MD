@@ -1,5 +1,5 @@
 # Zicken
-My entry for the "STOP WAITING FOR GODOT" game jam, organised by Terry Cavanagh.
+My entry for the "[STOP WAITING FOR GODOT](https://itch.io/jam/stop-waiting-for-godot)" game jam, organised by Terry Cavanagh.
 
 #stopwaitingforgodot
 

@@ -1,12 +1,11 @@
 # Zicken
+Inspired by the classic "Moorhuhn".
+
 My entry for the "[STOP WAITING FOR GODOT](https://itch.io/jam/stop-waiting-for-godot)" game jam, organised by Terry Cavanagh.
 
 #stopwaitingforgodot
 
 ![Gameplay GIF](art/public/Zicken_Progress_Score.gif)
-
-
-This game is supposed to be a re-imagination of the classic "Moorhuhn".
 
 ## Controls
 * Shoot with left-click
